@@ -59,8 +59,31 @@ $(document).ready(() => {
 	/* $('btn1').on('mousemove', (e) => {
 		console.log('Cords X: ' + e.clientX + ',' + 'Y: ' + e.clientY);
 	}); */
-
+	/* 
 	$(document).on('mousemove', (e) => {
-		console.log('Cords X: ' + e.clientX + ',' + 'Y: ' + e.clientY);
+		$('#cords').html('Cords - X: ' + e.clientX + ',' + ' Y: ' + e.clientY);
+	}); */
+
+	$('input').focus(function () {
+		// alert('focus');
+		$(this).css('background', 'pink');
+	});
+
+	$('input').blur(function () {
+		$(this).css('background', 'white');
+	});
+
+	/* $('input').keyup(function (e) {
+		console.log(e.target.value);
+	}); */
+
+	/* $('select#gender').change(function (e) {
+		alert(e.target.value);
+	}); */
+
+	$('#form').submit(function (e) {
+		e.preventDefault();
+		var name = $('input#name').val();
+		console.log(name);
 	});
 });
